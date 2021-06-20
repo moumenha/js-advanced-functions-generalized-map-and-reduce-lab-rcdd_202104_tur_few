@@ -1,9 +1,9 @@
 // Add your functions here
 
-function map(a, b) {
+function map(obj, b) {
   let arr = [];
-  for (let i=0; i <b.length; i++){
-  arr.push(b(arr[i]));
+  for (let i=0; i <obj.length; i++){
+  arr.push(b(obj[i]));
 }
 return arr;
 }
