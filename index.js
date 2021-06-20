@@ -8,3 +8,17 @@ function map(obj, b) {
 return arr;
 }
 
+function reduce(obj, b, acc){
+  const keys = Object.keys(obj);
+  let i = 1;
+  if(acc){
+    i=0;
+  }else{
+    acc = obj[keys[0]];
+  }
+  for (i; i<keys.length; i++ ){
+    acc = b(acc, obj[keys[i]]);
+  }
+  return acc;
+}
+
